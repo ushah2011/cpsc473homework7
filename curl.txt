@@ -1,0 +1,22 @@
+curl --silent --request POST \
+	 --header 'Content-Type: application/json' \
+       --data '{ "call": "heads" }' \
+       'http://localhost:3000/flip' | python -m json.tool
+
+
+curl --silent --request GET \
+     --header 'Content-Type: application/x-www-form-urlencoded' \
+     --data '{"title":"Google", "link":"https://www.google.com"}' \
+     'http://localhost:3000/links' | python -m json.tool
+
+
+curl --silent --request POST \
+     --header 'Content-Type: application/x-www-form-urlencoded' \
+     --data '{"title":"Google", "link":"https://www.google.com"}' \
+     'http://localhost:3000/links' | python -m json.tool
+
+curl --silent --request GET \
+     --header 'Content-Type: application/x-www-form-urlencoded' \
+     --data '{"title":"CPSC 473", "link":"https://sites.google.com/site/cpsc473"}' \
+     'http://localhost:3000/click/CPSC%20473' | python -m json.tool
+
